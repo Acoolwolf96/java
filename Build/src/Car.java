@@ -1,5 +1,6 @@
 
-public class car {
+
+public class Car {
 	public String brand = "Fiat";
 	public String model = "500";
 	public int amountOfFuel = 50;
@@ -33,3 +34,4 @@ public class car {
 	
 
 }
+
