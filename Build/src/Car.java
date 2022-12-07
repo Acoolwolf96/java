@@ -1,37 +1,54 @@
 
 
 public class Car {
-	public String brand = "Fiat";
-	public String model = "500";
-	public int amountOfFuel = 50;
+	public String brand;
+	public String model;
+	public int amountOfFuel;
 	
 	
-	static boolean accelerate = false;
-	
-	
-	public void brake() {
-		System.out.println("Car is braking");
-	}
-	
-	public void acceleration() {
-		if(accelerate = true) {
-			System.out.println("Car is accelerating");
-			System.out.println("Amount of fuel: " + (amountOfFuel -1));
-		}
-		
-		}
-		
-	
-	
-	
-	public void printData() {
-		System.out.println("Brand: " + brand);
-		System.out.println("Model: " + model);
-		System.out.println("Amount of fuel: " + amountOfFuel);
-	
-	}
-	
-	
+	   public Car(){
+	        brand = "";
+	        model = "";
+	        amountOfFuel = 0;
+	        
+	       
+	    
+	    }
 
-}
+	    
+	    public Car(String brand1, String model1, int amountOfFuel1){
+	        brand = brand1;
+	        model = model1;
+	        amountOfFuel = amountOfFuel1;
+	    }
+	    
+	    public String getModel(){
+	        return model;
+	    }
+	    
+	    public void setModel(String value){
+	        model = value;
+	    }
+	    
+	    public void getFuel() {
+	    	System.out.println("Fuel: " + amountOfFuel);
+	    }
 
+
+	    public void brake(){
+	        System.out.println("Car is breaking");
+	    }
+
+	    public void accelerate(){
+	        if(amountOfFuel > 0){
+	            System.out.println("Car is accelerating");
+	            amountOfFuel--;
+	        }
+	    }
+
+	    public void printData(){
+	        System.out.println("Brand: "+ brand);
+	        System.out.println("Model: "+ model);
+	        System.out.println("Fuel: "+ amountOfFuel);
+	    }
+	}
